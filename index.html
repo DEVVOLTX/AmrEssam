@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.ESSAM — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<canvas id="stars"></canvas>
+
+<nav>
+  <a href="#" class="nav-logo">A.ESSAM</a>
+<a href="amr_essam_cv_v3-1.pdf" class="nav-cv" download>CV ↓</a>
+</nav>
+
+<section id="hero">
+  <div class="hero-top-row">
+    <div class="hero-left">
+      <h1 class="hero-name">
+        <span class="white">AMR</span><br>
+        <span class="gradient">ESSAM</span>
+      </h1>
+      <div class="hero-role"><span class="cursor"></span></div>
+      <p class="hero-desc">Software Engineering student based in Kafr El Dawar, Egypt. Building immersive digital experiences and secure systems.</p>
+      <a href="mailto:amrt6509@gmail.com" class="btn-primary">CONTACT ME ↗</a>
+    </div>
+
+
+  </div>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">FULL-STACK</span>
+      <span class="ticker-item">CYBERSECURITY</span>
+      <span class="ticker-item">GODOT ENGINE</span>
+      <span class="ticker-item">GAME DEV</span>
+      <span class="ticker-item">FULL-STACK</span>
+      <span class="ticker-item">CYBERSECURITY</span>
+      <span class="ticker-item">GODOT ENGINE</span>
+      <span class="ticker-item">GAME DEV</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-label" style="position:relative;">
+  <span class="num">01</span>
+  <span class="slash">/</span>
+  <span>ABOUT_ME</span>
+</div>
+<section id="about">
+  <h2 class="about-title">Building robust systems, crafting immersive games, and breaking digital fortresses.</h2>
+  <p class="about-body">My expertise spans the entire stack, from frontend interfaces to deep backend architectures and game engines. I approach engineering not just as code, but as a medium for interactive experiences and secure infrastructures.</p>
+  <div class="edu-card">
+    <div class="edu-label">EDUCATION BASE</div>
+    <h3>Salah Salem Secondry School</h3>
+    <p>Sec School 2 bac</p>
+    <span class="badge">2026 — 2028</span>
+  </div>
+</section>
+
+<div class="section-label" style="position:relative;">
+  <span class="num">02</span>
+  <span class="slash">/</span>
+  <span>PROJECTS</span>
+</div>
+<section id="projects">
+
+  <div class="project-item">
+    <div class="project-number" onclick="toggleProject(this)">
+      <span>01</span>
+      <span class="project-name">ANDERMAGIC</span>
+      <span class="project-toggle"></span>
+    </div>
+    <div class="project-body open">
+      <p class="project-desc">A challenging 2D platformer built for precision and skill. Every level is hand-crafted to push the player's limits. Solo developed from concept to launch.</p>
+      <p class="project-detail">Designed all mechanics, levels, and artwork as a solo developer using the Godot 4.6 engine and GDScript. Published and available on GitHub.</p>
+      <a href="https://github.com/DEVVOLTX" target="_blank" class="btn-outline">⬡ VIEW ON GITHUB</a>
+      <div class="meta-card">
+        <div><div class="key">YEAR</div><div class="val">2024</div></div>
+        <div><div class="key">TYPE</div><div class="val white">Game Development</div></div>
+      </div>
+      <div class="tags">
+        <span class="tag">GODOT 4.6</span>
+        <span class="tag">GDSCRIPT</span>
+        <span class="tag">2D PLATFORMER</span>
+        <span class="tag">SOLO DEV</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-item">
+    <div class="project-number" onclick="toggleProject(this)">
+      <span>02</span>
+      <span class="project-name">HIDE AND SINK</span>
+      <span class="project-toggle"></span>
+    </div>
+    <div class="project-body">
+      <p class="project-desc">A multiplayer game of strategy and deception — players outwit each other using misdirection, positioning, and timing.</p>
+      <p class="project-detail">Co-developed with a partner, built for real-time multiplayer. Published and live on Itch.io for players to enjoy.</p>
+      <a href="https://github.com/DEVVOLTX" target="_blank" class="btn-outline">↗ VIEW ON GITHUB</a>
+      <div class="meta-card">
+        <div><div class="key">YEAR</div><div class="val">2024</div></div>
+        <div><div class="key">TYPE</div><div class="val white">Game Development</div></div>
+      </div>
+      <div class="tags">
+        <span class="tag">MULTIPLAYER</span>
+        <span class="tag">CO-DEV</span>
+        <span class="tag">GAME DESIGN</span>
+        <span class="tag">ITCH.IO</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-item">
+    <div class="project-number" onclick="toggleProject(this)">
+      <span>03</span>
+      <span class="project-name">CAR-WASH BOOKING</span>
+      <span class="project-toggle"></span>
+    </div>
+    <div class="project-body">
+      <p class="project-desc">A full-stack reservation system — customers book slots, staff manage schedules, and the system keeps it all running.</p>
+      <p class="project-detail">Built with PHP, JavaScript, and MySQL. Handles authentication, booking logic, slot availability, and a full admin panel for staff management.</p>
+      <a href="https://github.com/DEVVOLTX" target="_blank" class="btn-outline">⬡ VIEW ON GITHUB</a>
+      <div class="meta-card">
+        <div><div class="key">YEAR</div><div class="val">2024</div></div>
+        <div><div class="key">TYPE</div><div class="val white">Full-Stack Web</div></div>
+      </div>
+      <div class="tags">
+        <span class="tag">PHP</span>
+        <span class="tag">JAVASCRIPT</span>
+        <span class="tag">MYSQL</span>
+        <span class="tag">HTML/CSS</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="section-label" style="position:relative;">
+  <span class="num">03</span>
+  <span class="slash">/</span>
+  <span>SYSTEM_SKILLS</span>
+</div>
+<section id="skills">
+  <div class="skill-category">
+    <div class="skill-cat-title">TOOLS & ENGINES</div>
+    <div class="skill-grid">
+      <div class="skill-card"><span class="skill-icon">🎮</span>Godot Engine</div>
+      <div class="skill-card"><span class="skill-icon">🔀</span>Git</div>
+      <div class="skill-card"><span class="skill-icon">🐧</span>Linux</div>
+      <div class="skill-card"><span class="skill-icon">🐧</span>Kali Linux</div>
+    </div>
+  </div>
+  <div class="skill-category">
+    <div class="skill-cat-title">CYBERSECURITY</div>
+    <div class="skill-grid">
+      <div class="skill-card"><span class="skill-letter">P</span>Penetration Testing</div>
+      <div class="skill-card"><span class="skill-letter">N</span>Nmap</div>
+      <div class="skill-card"><span class="skill-letter">B</span>Burp Suite</div>
+      <div class="skill-card"><span class="skill-letter">M</span>Metasploit</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-heading">
+    <div>LET'S BUILD</div>
+    <div class="line2">THE FUTURE</div>
+  </div>
+  <a href="amrt6509@gmail.com" class="contact-email">amrt6509@gmail.com</a>
+  <div class="social-links">
+    <a href="https://github.com/DEVVOLTX" target="_blank" class="social-link" title="GitHub">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+    </a>
+    <a href="https://wa.me/201551657717" target="_blank" class="social-link" title="WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.86 11.86 0 0 0 12 0 12 12 0 0 0 0 12c0 2.11.54 4.16 1.57 5.99L0 24l6.21-1.63A12 12 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.18-1.24-6.17-3.48-8.52ZM12 22c-1.7 0-3.36-.46-4.82-1.34l-.35-.21-3.76.99 1-3.66-.22-.36A9.96 9.96 0 0 1 2 12c0-5.52 4.48-10 10-10 2.67 0 5.18 1.04 7.07 2.93A9.96 9.96 0 0 1 22 12c0 5.52-4.48 10-10 10Zm5.52-7.99c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.23-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.51-1.79-1.68-2.09-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.12 3.23 5.13 4.53.72.31 1.28.49 1.72.62.72.22 1.38.19 1.9.12.58-.09 1.77-.72 2.02-1.41.25-.69.25-1.28.17-1.41-.08-.14-.27-.22-.57-.37Z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/3am_our1430?igsh=MXc5bHo2M2Nwc3o4MA==" target="_blank" class="social-link" title="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm9 2h-9A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-2.3a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0Z"/></svg>
+    </a>
+    <a href="amrt6509@gmail.com" class="social-link" title="Gmail">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.907 1.528-1.148C21.69 2.28 24 3.434 24 5.457z"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>SYS.OFFLINE &bull; &copy; 2026 <span>AMR ESSAM</span></footer>
+
+<script>
+(function(){
+  const canvas = document.getElementById('stars');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; }
+  function init(){ stars=[]; for(let i=0;i<180;i++) stars.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.2+0.2,a:Math.random(),speed:Math.random()*0.003+0.001}); }
+  function draw(){ ctx.clearRect(0,0,canvas.width,canvas.height); stars.forEach(s=>{ s.a+=s.speed; const alpha=(Math.sin(s.a)+1)/2*0.7+0.1; ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fillStyle=`rgba(200,200,255,${alpha})`; ctx.fill(); }); requestAnimationFrame(draw); }
+  resize(); init(); draw();
+  window.addEventListener('resize',()=>{ resize(); init(); });
+})();
+
+function toggleProject(el){ el.nextElementSibling.classList.toggle('open'); }
+
+(function(){
+  const roles = ['Full-Stack Developer', 'Game Developer', 'Cybersecurity Enthusiast'];
+  let ri=0, ci=0, deleting=false;
+  const el = document.querySelector('.hero-role');
+  function type(){
+    const word = roles[ri];
+    if(!deleting){
+      el.firstChild && el.firstChild.nodeType===3
+        ? el.firstChild.textContent = '> '+word.slice(0,ci+1)
+        : el.insertBefore(document.createTextNode('> '+word.slice(0,ci+1)), el.firstChild);
+      ci++;
+      if(ci===word.length){ setTimeout(()=>deleting=true,1800); setTimeout(type,120); return; }
+    } else {
+      el.firstChild.textContent = '> '+word.slice(0,ci-1);
+      ci--;
+      if(ci===0){ deleting=false; ri=(ri+1)%roles.length; }
+    }
+    setTimeout(type, deleting?60:120);
+  }
+  el.innerHTML = '<span class="cursor"></span>';
+  type();
+})();
+</script>
+</body>
+</html>
+
