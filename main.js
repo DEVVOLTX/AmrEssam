@@ -5,12 +5,22 @@
   const loader = document.getElementById('loader');
   let p = 0;
   const iv = setInterval(() => {
-    p += Math.random() * 18;
+    p += Math.random() * 15;
     if (p >= 100) { p = 100; clearInterval(iv); }
     bar.style.width = p + '%';
     pct.textContent = Math.floor(p) + '%';
-    if (p === 100) setTimeout(() => { loader.classList.add('hide'); setTimeout(()=>loader.remove(),700); }, 300);
-  }, 80);
+    if (p === 100) setTimeout(() => { loader.classList.add('hide'); setTimeout(()=>loader.remove(),600); }, 200);
+  }, 60);
+  // Force completion after 3 seconds max
+  setTimeout(() => {
+    if (!loader.classList.contains('hide')) {
+      p = 100;
+      bar.style.width = '100%';
+      pct.textContent = '100%';
+      clearInterval(iv);
+      setTimeout(() => { loader.classList.add('hide'); setTimeout(()=>loader.remove(),600); }, 200);
+    }
+  }, 3000);
 })();
 
 // ── CUSTOM CURSOR ──
@@ -67,29 +77,6 @@ function toggleProject(el){
 (function(){
   const btn=document.getElementById('btt');
   addEventListener('scroll',()=>{ btn.classList.toggle('show',scrollY>400); });
-})();
-// ── 3D TILT EFFECT ──
-(function () {
-  const tiltEls = document.querySelectorAll(
-    '.skill-card, .cert-card, .logo-card, .car-card, .edu-card'
-  );
-
-  tiltEls.forEach(el => {
-    el.addEventListener('mousemove', e => {
-      const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const rotX = ((y - cy) / cy) * -10;
-      const rotY = ((x - cx) / cx) * 10;
-      el.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(10px)`;
-    });
-
-    el.addEventListener('mouseleave', () => {
-      el.style.transform = '';
-    });
-  });
 })();
 
 // ── SCROLL REVEAL ──
