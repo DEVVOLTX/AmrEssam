@@ -35,7 +35,19 @@
 })();
 
 // ── PROJECT TOGGLE ──
-function toggleProject(el){ el.nextElementSibling.classList.toggle('open'); }
+function toggleProject(el){
+  const next = el && el.nextElementSibling;
+  if (next) next.classList.toggle('open');
+}
+
+(function () {
+  // Attach click handlers to project headers/ptoggle so toggle works without inline JS.
+  const projectHeaders = document.querySelectorAll('.project-header');
+  projectHeaders.forEach(h => {
+    h.addEventListener('click', () => toggleProject(h));
+  });
+})();
+
 
 // ── TYPING EFFECT ──
 (function(){
